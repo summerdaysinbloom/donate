@@ -9,6 +9,9 @@ function post_to_fb() {
   then upload photo
 */
 
+  $('.status-done').hide();
+  $('.status-wait').show();
+  show_notification();
 
   fblogin()
   .then(
@@ -22,12 +25,14 @@ function post_to_fb() {
 
     // upload success
     function(response){
-      console.log('upload done');
-      console.log(response);
+      // console.log('upload done');
+      // console.log(response);
 
       // this is the url
       var url = 'http://www.facebook.com/photo.php?fbid=' + response.id + '&makeprofile=1';
       $('.photo_link').attr('href', url);
+      $('.status-done').show();
+      $('.status-wait').hide();
       show_notification();
       // console.log(url)
       // notification(url);
@@ -35,8 +40,8 @@ function post_to_fb() {
 
     // can't upload. error might be caused by no auth or upload error
     function(error){
-      console.log('upload error')
-      console.log(error)
+      // console.log('upload error')
+      // console.log(error)
       // handle upload error
     }
 
@@ -49,13 +54,13 @@ function post_to_fb() {
 
 function fblogin() {
   
-  console.log('connecting...')
+  // console.log('connecting...')
 
   var _when = when.defer();
 
   FB.login(function(response) {
     if (response.authResponse) {
-      console.log('connected')
+      // console.log('connected')
       _when.resolve(response)
 
     } 
@@ -72,14 +77,14 @@ function fblogin() {
 
 
 function fbuploadphoto() {
-  console.log('uploading photo');
+  // console.log('uploading photo');
 
   var _when = when.defer();
 
   var imgURL="http://www.nogiftxmas.org/images/nogiftxmas.png";
   
   FB.api('/me/photos', 'post', {
-    message:"Dear friends, in light of the recent tragedy in the Philippines, I'm taking a pledge: to have a NO GIFT XMAS. Don'’'t shop for a gift for me. Give to the victims of Typhoon Yolanda instead at http://www.nogiftxmas.org",
+    message:"Dear friends, in light of the recent tragedy in the Philippines, I'm taking a pledge to have a NO GIFT XMAS. Don't shop for a gift for me. Instead, donate to the victims of Typhoon Yolanda at http://www.nogiftxmas.org",
     url:imgURL        
   }, function(response){
 
