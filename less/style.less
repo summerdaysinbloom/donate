@@ -179,12 +179,42 @@ body {
 
 #notification-window.show {
 	display: block;
-	div {
-		background: #fff;
+	> div {
 	  height: 200px;
     margin: 25% auto;
 	  width: 40%;
 	}
+}
+
+#popup-btn {
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+}
+
+#popup-box {
+	display: inline-block;
+	background: #000;
+	padding-left: 20px;
+	.border-radius(8px,8px,8px,8px);
+	div {
+		display: inline-block;
+		padding: 10px;
+		p, a {
+			color: @red;
+		}
+		a {
+			text-decoration: underline;
+		}
+		#close {
+			text-decoration: none;
+		}
+	}
+}
+
+#popup-btn {
+	margin-top: -55px;
+  margin-bottom: 23px;
 }
 
 /* */
