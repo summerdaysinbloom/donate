@@ -1,0 +1,154 @@
+@import 'elements.less';
+
+@orange: #f04e2f;
+@red: #f04d4b;
+@green: #213c2d;
+
+@font-face {
+  font-family: 'Dinot';
+  font-weight: normal;
+  src: url("fonts/DINOT-Regular.otf") format("opentype");
+}
+
+@font-face {
+font-family: 'DinotBold';
+font-weight: bold;
+src: url("fonts/DINOT-Bold.otf") format("opentype");
+}
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100%;
+	background: url(images/background.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /*background-size: auto 100%;*/
+  font-family: DinotBold, Dinot ,serif; 
+  padding: 0;
+}
+
+.container {
+	color: @orange;
+	font-family: Dinot ,serif; 
+	text-shadow: 0 1px 0 rgba(0,0,0,.3);
+}
+
+#overlay {
+	background-image: -moz-linear-gradient(bottom, rgba(0,0,0,.6) 0%, rgba(0,0,0,0) 100%);
+  background-image: -o-linear-gradient(bottom, rgba(0,0,0,.6) 0%, rgba(0,0,0,0) 100%);
+  background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,.6) 0%, rgba(0,0,0,0) 100%);
+  background-image: linear-gradient(to top,  rgba(0,0,0,.6) 0%, rgba(0,0,0,0) 100%);
+  height: 100%;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+}
+
+#share {
+	padding: 20px;
+	> div {
+		display: inline-block;
+		a {
+			background: #fff;
+			color: #4c4c4d;
+			margin-right: 7px;
+			padding: 6px 7px 4px;
+			text-decoration: none;
+			.drop-shadow(0, 1px, 5px ,0.1);
+			.rounded(3px);
+		}
+	}
+}
+
+#logo {
+	background: url(./images/logo.png) no-repeat center center;
+	background-size: auto 100% ;
+	text-indent: -999em;
+	margin-top: 170px;
+}
+
+.jumbotron {
+	background: none;
+	border: none;
+	text-align: center;
+	h1 {
+		line-height: 4;
+		strong {
+			text-transform: uppercase;
+		}
+	}
+	.lead {
+		font-family: 'DinotBold';
+		margin: 0;
+		text-shadow: 0 1px 3px rgba(0,0,0,.5);
+		text-transform: uppercase;
+	}
+}
+
+#section-donation {
+	color: @red;
+	p {
+		margin: 0;
+	}
+	.donate-banner {
+		display: inline-block;
+		margin: 0;
+	}
+	#red-cross {
+		margin-left: 10px;
+		img {
+		  height: 55px;
+		}
+	}
+	#help {
+		margin-top: 3px;
+	}
+}
+
+#section-facebook {
+	color: @red;
+	img {
+		width: 100px;
+		height: auto;
+	}
+	h4,
+	div {
+		display: inline-block;
+		p {
+		  display: block;
+		  span {
+		  	text-transform: uppercase;
+		  }
+	  }
+	}
+	h4 {
+		margin: 0;
+		margin-left: 15px;
+	}
+	div {
+    bottom: 0px;
+    margin-left: 10px;
+		position: absolute;
+		p {
+			margin: 0;
+		}
+	}
+}
+
+.icon-indent {
+	text-indent: -999em;
+}
+
+@media (min-width: 768px) {
+  .lead {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "nogiftxman",
+  "description": "donate to the victoms of haiyan",
+  "version": "0.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.2",
+    "grunt-contrib-less": "~0.7.0"
+  },
+  "author": "Aimee"
+}
