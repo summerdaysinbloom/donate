@@ -26,7 +26,11 @@ function post_to_fb() {
       console.log(response);
 
       // this is the url
-      console.log('http://www.facebook.com/photo.php?fbid=' + response.id)
+      var url = 'http://www.facebook.com/photo.php?fbid=' + response.id + '&makeprofile=1';
+      $('.photo_link').attr('href', url);
+      show_notification();
+      // console.log(url)
+      // notification(url);
     },
 
     // can't upload. error might be caused by no auth or upload error
