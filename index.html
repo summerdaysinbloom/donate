@@ -86,7 +86,7 @@
         </div>
 
         <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0" id='section-facebook'>
-          <h4 class='facebook-wrapper'><a onclick="post_to_fb();" id='button'><img src='./images/nogiftxmas.png'/></a></h4>
+          <h4 class='facebook-wrapper'><a onclick="post_to_fb();" id='button-pledge'><img src='./images/nogiftxmas.png'/></a></h4>
           <div class='facebook-wrapper'>
             <p><a onclick="post_to_fb();">Pledge to have a <span>no gift xmas</span>.<br>
             Click and make this your profile picture now.</a></a></p>
@@ -149,6 +149,11 @@
 
       ga('create', 'UA-45746463-1', 'nogiftxmas.org');
       ga('send', 'pageview');
+
+
+      $('.photo_link').click(function() {
+        ga('send', 'event', 'button', 'click', 'make-profile');
+      })
 
     </script>
 </body>

@@ -8,7 +8,7 @@ function post_to_fb() {
   login first
   then upload photo
 */
-
+  ga('send', 'event', 'button', 'click', 'pledge');
   $('.status-done').hide();
   $('.status-wait').show();
   show_notification();
