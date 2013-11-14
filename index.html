@@ -28,10 +28,15 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+
+    <style>
+      a {
+        cursor: pointer
+      }
+    </style>
   </head>
 
   <body>
-    <div id='overlay'></div>
     <div id='notification-overlay'>
       <div id='notification-window'>
         <div>
@@ -71,14 +76,13 @@
         <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0" id='section-facebook'>
           <h4 class='facebook-wrapper'><a onclick="post_to_fb();" id='button'><img src='./images/nogiftxmas.png'/></a></h4>
           <div class='facebook-wrapper'>
-            <p><a id='notification'>Pledge to have a <span>no gift xmas</span>.</a></p>
-            <p><a onclick="post_to_fb();">Click and make this your profile picture now.</a></p>
+            <p><a onclick="post_to_fb();">Pledge to have a <span>no gift xmas</span>.<br>
+            Click and make this your profile picture now.</a></a></p>
           </div>
         </div>
       </div>
     </div> <!-- /container -->
 
-    <div id="output"></div>
     <!-- facebook -->
     <script>
         window.fbAsyncInit = function() {
