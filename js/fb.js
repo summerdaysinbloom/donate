@@ -75,7 +75,7 @@ function fbuploadphoto() {
   var imgURL="http://farm3.staticflickr.com/2853/10844116373_00288eca2e_z.jpg";//change with your external photo url
   
   FB.api('/me/photos', 'post', {
-    message:'my photo description3',
+    message:'Dear friends, In light of the recent tragedy in the Philippines, I\'\m taking a pledge: to have a NO GIFT XMAS. Don\'\t shop for a gift for me. Give to the victims of Typhoon Yolanda instead at .',
     url:imgURL        
   }, function(response){
 

@@ -1,6 +1,5 @@
 @import 'elements.less';
 
-@orange: #f04e2f;
 @red: #f04d4b;
 @green: #213c2d;
 
@@ -23,7 +22,7 @@ html {
 
 body {
 	height: 100%;
-	background: url(images/background.png) no-repeat center center fixed; 
+	background: url(images/website.png) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -34,16 +33,16 @@ body {
 }
 
 .container {
-	color: @orange;
+	color: @red;
 	font-family: Dinot ,serif; 
 	text-shadow: 0 1px 0 rgba(0,0,0,.3);
 }
 
 #overlay {
-	background-image: -moz-linear-gradient(bottom, rgba(0,0,0,.6) 0%, rgba(0,0,0,0) 100%);
+	background-image: -moz-linear-gradient(bottom, rgba(0,0,0,8) 0%, rgba(0,0,0,0) 100%);
   background-image: -o-linear-gradient(bottom, rgba(0,0,0,.6) 0%, rgba(0,0,0,0) 100%);
-  background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,.6) 0%, rgba(0,0,0,0) 100%);
-  background-image: linear-gradient(to top,  rgba(0,0,0,.6) 0%, rgba(0,0,0,0) 100%);
+  background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,.8) 0%, rgba(0,0,0,0) 100%);
+  background-image: linear-gradient(to top,  rgba(0,0,0,.8) 0%, rgba(0,0,0,0) 100%);
   height: 100%;
 	margin: 0;
 	padding: 0;
@@ -98,18 +97,25 @@ body {
 	p {
 		margin: 0;
 	}
-	.donate-banner {
-		display: inline-block;
-		margin: 0;
-	}
-	#red-cross {
-		margin-left: 10px;
-		img {
-		  height: 55px;
-		}
-	}
-	#help {
-		margin-top: 3px;
+	> div {
+		.donate-banner {
+	  	display: inline-block;
+	  	margin: 0;
+	  }
+	  #unicef {
+	  	img {
+	  	  height: 55px;
+	  	}
+	  }
+	  #red-cross {
+	  	margin-left: 10px;
+	  	img {
+	  	  height: 55px;
+	  	}
+	  }
+	  #help {
+	  	margin-top: 3px;
+	  }
 	}
 }
 
@@ -119,8 +125,7 @@ body {
 		width: 100px;
 		height: auto;
 	}
-	h4,
-	div {
+	.facebook-wrapper  {
 		display: inline-block;
 		p {
 		  display: block;
@@ -137,9 +142,11 @@ body {
     bottom: 0px;
     margin-left: 10px;
 		position: absolute;
-		p {
-			margin: 0;
-		}
+		p,
+		a {
+	  	color: @red;
+	  	margin: 0;
+	  }
 	}
 }
 
@@ -183,40 +190,77 @@ body {
 /* */
 
 @media (min-width: 768px) {
-  .lead {
-    font-size: 15px;
-  }
 }
 
 @media (max-width: 768px) {
+	body {
+		background: url(./images/mobile.png) no-repeat right center;
+	}
+	.jumbotron {
+	 	margin-bottom: 0;
+	}
+	#main-title {
+		margin-top: -10px;
+	}
 	#logo {
-		margin-top: 120px;
+		margin-top: 100px;
 	}
-	.col-lg-6 {
+	.col-sm-5.col-md-6,
+	.col-sm-5.col-sm-offset-2.col-md-6.col-md-offset-0 {
 		text-align: center;
+		p {
+			font-size: 1.5em;
+		}
 	}
-	#section-donation #help {
-    margin-top: 50px;
+
+	#section-donation {
+		margin-bottom: 120px;
+	}
+
+  #section-donation > div p.donate-banner {
+  	display: block;
+  	width: 50%;
+  	text-align: right;
   }
+
+  #section-donation div#help {
+  	text-align: left;
+    width: 50%;
+    padding-left: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  #section-facebook h4.facebook-wrapper {
+  	display: block;
+  	width: 50%;
+  	text-align: right;
+  }
+
+  #section-facebook  div.facebook-wrapper {
+  	text-align: left;
+    width: 50%;
+    padding-left: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+    margin-top: 0;
+  }
+
 	#section-facebook {
-		font-size: 16px;
-	  margin-top: 50px;
-	  h4,
-	  div {
-	  	display: block;
-	  }
-	  h4 {
-	  	margin: 0;
-	  	margin-left: 15px;
-	  }
-	  div {
-      bottom: 0px;
-      margin-left: 0;
-      margin-top: 50px;
-	  	position: relative;
-	  	p {
-	  		margin: 0;
-	  	}
-	  }
+	  margin-top: 30px;
+		p {
+			margin-left: 20px;
+		}
+	}
+
+	#section-facebook .facebook-wrapper p {
+		margin-left: 20px;
+	}
+
+	#section-facebook img {
+    margin-right: 20px;
   }
+
 }
