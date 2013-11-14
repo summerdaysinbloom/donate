@@ -26,8 +26,15 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body> 
+    <div id='notification-overlay'>
+      <div id='notification-window'>
+        <div>
 
+          <a id='close'>Close</a>
+          notification</div>
+      </div>
+    </div>
     <div class="container">
 
       <div class="jumbotron" id='logo'>
@@ -56,7 +63,7 @@
         <div class="col-lg-6" id='section-facebook'>
           <h4><a onclick="post_to_fb();"><img src='./images/banner.png'/></a></h4>
           <div>
-            <p>Pledge to have a <span>no gift xmas</span>.</p>
+            <p><a id='notification'>Pledge to have a <span>no gift xmas</span>.</a></p>
             <p><a onclick="post_to_fb();">Make this your profile picture now.</a></p>
           </div>
         </div>
@@ -107,5 +114,8 @@
     </script>
     <script src="bower_components/when/when.js"></script>
     <script src="js/fb.js"></script>
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="js/notification.js"></script>
+    <script>notification();</script>
 </body>
 </html>
