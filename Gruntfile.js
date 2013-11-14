@@ -1,5 +1,15 @@
 module.exports = function(grunt) {
+    // Project configuration.
     grunt.initConfig({
+        connect: {
+            server: {
+                options: {
+                    port: 4000,
+                    keepalive: true,
+                    base: '.'
+                }
+            }
+        },
         less: {
             dev: {
                 options: {
@@ -18,12 +28,18 @@ module.exports = function(grunt) {
         }
     });
 
+    // Front-end server
+    grunt.loadNpmTasks('grunt-contrib-connect');
+    
     // watch files
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Compile less files
     grunt.loadNpmTasks('grunt-contrib-less');
  
+    // Compile less task.
+    grunt.registerTask('theme', ['watch']);
+    
     // Client server.
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('default', ['connect']);
 };

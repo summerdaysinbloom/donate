@@ -10,6 +10,8 @@
   <title>No gift XMAS</title>
 
   <!-- Stylesheet -->
+  <link href="less/bootstrap.min.css" rel="stylesheet">
+  <link href="less/jumbotron.css" rel="stylesheet">
   <link href="assets.css" rel="stylesheet">
   <!-- Font and icons-->
   <link rel="stylesheet" href="http://i.icomoon.io/public/temp/23d6c0d182/UntitledProject1/style.css">
@@ -79,6 +81,55 @@
         </p>
       </div>
     </div>
-  <script></script>
+    <!-- scripts -->
+  <script ></script>
+  <!-- facebook -->
+  <script>
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    FB.init({
+      appId      : '364769780336475',                        // App ID from the app dashboard
+      channelUrl : './channel.html', // Channel file for x-domain comms
+      status     : true,                                 // Check Facebook Login status
+      xfbml      : true                                  // Look for social plugins on the page
+    });
+
+    // Additional initialization code such as adding Event Listeners goes here
+  };
+
+  // Load the SDK asynchronously
+  (function(){
+     // If we've already installed the SDK, we're done
+     if (document.getElementById('facebook-jssdk')) {return;}
+
+     // Get the first script element, which we'll use to find the parent node
+     var firstScriptElement = document.getElementsByTagName('script')[0];
+
+     // Create a new script element and set its id
+     var facebookJS = document.createElement('script'); 
+     facebookJS.id = 'facebook-jssdk';
+
+     // Set the new script's source to the source of the Facebook JS SDK
+     facebookJS.src = '//connect.facebook.net/en_US/all.js';
+
+     // Insert the Facebook JS SDK into the DOM
+     firstScriptElement.parentNode.insertBefore(facebookJS, firstScriptElement);
+   }());
+</script>
+<button onclick="post_to_fb();">Post to FB</button>
+<div id="output"></div>
+
+</body>
+
+<!-- TO PROPERLY SUPPORT WHEN.JS ON BROWSER -->
+<script>
+    window.define = function(factory) {
+        try{ delete window.define; } catch(e){ window.define = void 0; } // IE
+        window.when = factory();
+    };
+    window.define.amd = {};
+</script>
+<script src="bower_components/when/when.js"></script>
+<script src="js/fb.js"></script>
 </body>
 </html>
