@@ -37,12 +37,17 @@
   </head>
 
   <body>
+    <div id='overlay'></div>
     <div id='notification-overlay'>
       <div id='notification-window'>
-        <div>
-          <a id='close'>Close</a>
-          <p>You're almost done updating your profile picture.
-            <a href=''>Click here, expand the image and select 'Dont cropping'.</a></p>
+        <div>          
+          <div id='popup-box'>
+            <img id='popup-btn' src='./images/nogiftxmas.png'/>
+            <div>
+              <p>You're almost done updating your profile picture.</p>
+              <p><a href=''>Click here, expand the image and select 'Dont cropping'.</a></p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -59,6 +64,10 @@
 
       <div class="row marketing">
         <div class="col-sm-5 col-md-6"  id='section-donation'>
+          <div id='help'>
+            <p>There's no better gift than the gift of hope.</p>
+            <p>Donate now. Millions need your help.</p>
+          </div>
           <div>
             <p class='donate-banner'>
               <a id='unicef' href='Https://donate.unicef.ph/campaign/24/typhoon-yolanda-emergency-appeal'><img src='./images/unicef.png'/></a>
@@ -67,10 +76,7 @@
               <a id='red-cross' href='Http://ushare.redcross.org.ph'><img src='./images/red-cross-logo.png'/></a>
             </p>
           </div>
-          <div id='help'>
-            <p>There's no better gift than the gift of hope.</p>
-            <p>Donate now. Millions need your help.</p>
-          </div>
+          
         </div>
 
         <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0" id='section-facebook'>
