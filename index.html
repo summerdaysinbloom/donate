@@ -30,12 +30,14 @@
     <![endif]-->
   </head>
 
-  <body> 
+  <body>
+    <div id='overlay'></div>
     <div id='notification-overlay'>
       <div id='notification-window'>
         <div>
           <a id='close'>Close</a>
-          Great! Now go to facebook and make this your profile picture. <a target="_blank" class="photo_link" href="">Go to facebook</a>
+          <p>You're almost done updating your profile picture.
+            <a href=''>Click here, expand the image and select 'Dont cropping'.</a></p>
         </div>
       </div>
     </div>
@@ -45,30 +47,32 @@
         <h1>No gift <span>xmas</span></h1>
       </div>
 
-      <div class="jumbotron">
-        <p class="lead">This Christman, Don't shop for christmas.</p>
+      <div class="jumbotron" id='main-title'>
+        <p class="lead">This Christmas, Don't shop for gifts.</p>
         <p class="lead">Give to the victims of typhoon yolanda.</p>
       </div>
 
       <div class="row marketing">
-        <div class="col-lg-6"  id='section-donation'>
-          <p class='donate-banner'>
-          <a id='unicef' href='Http://donate.unhcr.org/phillippines'><img src='./images/unicef.png'/></a>
-        </p>
-        <p class='donate-banner'>
-          <a id='red-cross' href='Http://ushare.redcross.org.ph'><img src='./images/red-cross-logo.png'/></a>
-        </p>
-        <div id='help'>
-          <p>There's no better gift than the gift of hope.</p>
-          <p>Donate now. Millions need your help.</p>
-        </div>
-      </div>
-
-        <div class="col-lg-6" id='section-facebook'>
-          <h4><a onclick="post_to_fb();"><img src='./images/banner.png'/></a></h4>
+        <div class="col-sm-5 col-md-6"  id='section-donation'>
           <div>
+            <p class='donate-banner'>
+              <a id='unicef' href='Https://donate.unicef.ph/campaign/24/typhoon-yolanda-emergency-appeal'><img src='./images/unicef.png'/></a>
+            </p>
+            <p class='donate-banner'>
+              <a id='red-cross' href='Http://ushare.redcross.org.ph'><img src='./images/red-cross-logo.png'/></a>
+            </p>
+          </div>
+          <div id='help'>
+            <p>There's no better gift than the gift of hope.</p>
+            <p>Donate now. Millions need your help.</p>
+          </div>
+        </div>
+
+        <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0" id='section-facebook'>
+          <h4 class='facebook-wrapper'><a onclick="post_to_fb();" id='button'><img src='./images/nogiftxmas.png'/></a></h4>
+          <div class='facebook-wrapper'>
             <p><a id='notification'>Pledge to have a <span>no gift xmas</span>.</a></p>
-            <p><a onclick="post_to_fb();">Make this your profile picture now.</a></p>
+            <p><a onclick="post_to_fb();">Click and make this your profile picture now.</a></p>
           </div>
         </div>
       </div>
