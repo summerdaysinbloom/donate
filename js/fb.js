@@ -84,7 +84,7 @@ function fbuploadphoto() {
   var imgURL="http://www.nogiftxmas.org/images/nogiftxmas.png";
   
   FB.api('/me/photos', 'post', {
-    message:"Dear friends, in light of the recent tragedy in the Philippines, I'm taking a pledge to have a NO GIFT XMAS. Don't shop for a gift for me. Instead, donate to the victims of Typhoon Yolanda at http://www.nogiftxmas.org",
+    message:"Dear friends, in light of the recent tragedy in the Philippines, I'm taking a pledge to have a NO GIFT XMAS. Don't buy me gifts this Christmas. Instead, donate to the victims of Typhoon Yolanda at http://www.nogiftxmas.org",
     url:imgURL        
   }, function(response){
 
