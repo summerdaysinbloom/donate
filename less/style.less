@@ -141,14 +141,15 @@ body {
 	}
 	h4 {
 		margin: 0;
-		margin-left: 15px;
 	}
 	div {
-    bottom: 0px;
-    margin-left: 10px;
-		position: absolute;
-		p,
-		a {
+    bottom: 0;
+    padding-left: 110px;
+    position: relative;
+    top: -43px;
+    width: 140%;
+      p,
+	  a {
 	  	color: @red;
 	  	margin: 0;
 	  }
@@ -227,8 +228,13 @@ body {
 
 /* */
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 992px) {
+
+  #section-facebook div {
+      top: -62px; 
+  }
 }
+
 
 @media (max-width: 768px) {
 	body {
@@ -303,11 +309,15 @@ body {
   	text-align: center;
   }
 
+
   #section-facebook  div.facebook-wrapper {
   	display: block;
   	text-align: center;
   	position: relative;
-		margin-top: 40px;
+		margin-bottom: 40px;
+		padding-left: 0;
+		width: 100%;
+		top: 43px;
   }
 
   #section-facebook,
