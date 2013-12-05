@@ -22,7 +22,8 @@ html {
 
 body {
 	height: 100%;
-	background: url(images/website.png) no-repeat center center fixed; 
+	background: url(images/website-optimized.jpg) no-repeat center center fixed; 
+
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -36,24 +37,30 @@ body {
 	color: @red;
 	font-family: Dinot ,serif; 
 	text-shadow: 0 1px 0 rgba(0,0,0,.3);
+	padding-left: 0;
+	padding-right: 0;
+	text-align: center;
+}
+.container::after {
+	display: none;
 }
 
 #overlay {
 	background-image: -moz-linear-gradient(bottom, rgba(0,0,0,8) 0%, rgba(0,0,0,0) 100%);
-  background-image: -o-linear-gradient(bottom, rgba(0,0,0,.6) 0%, rgba(0,0,0,0) 100%);
-  background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,.8) 0%, rgba(0,0,0,0) 100%);
-  background-image: linear-gradient(to top,  rgba(0,0,0,.8) 0%, rgba(0,0,0,0) 100%);
-  height: 100%;
+	background-image: -o-linear-gradient(bottom, rgba(0,0,0,.6) 0%, rgba(0,0,0,0) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,.8) 0%, rgba(0,0,0,0) 100%);
+	background-image: linear-gradient(to top,  rgba(0,0,0,.8) 0%, rgba(0,0,0,0) 100%);
+	height: 100%;
 	margin: 0;
 	padding: 0;
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	z-index: -1;
 }
 
 #share {
 	z-index: 3;
-	padding: 20px;
+	padding: 28px 30px 0 30px;
 	> div {
 		display: inline-block;
 		a {
@@ -66,100 +73,149 @@ body {
 			.rounded(3px);
 		}
 	}
+	width: 100%;
 }
 
 #logo {
-	background: url(./images/logo.png) no-repeat center center;
-	background-size: auto 100% ;
+	background: url(./images/logo-mobile.png) no-repeat center center;
+	//background: red;
+	background-size: 102px 116px;
+	height: 116px;
+	margin: 42px auto 42px;
 	text-indent: -999em;
-	margin-top: 170px;
+	width: 102px;
 }
 
-.jumbotron {
-	background: none;
-	border: none;
+.lead {
+	color: #fff;
+	display: block;
+	font-family: 'DinotBold';
+	font-size: 14px;
+	letter-spacing: 1px;
+	line-height: 21px;
+	margin: 0 auto 42px;
+	//text-shadow: none;
+	text-transform: uppercase;
 	text-align: center;
-	h1 {
-		line-height: 4;
-		strong {
-			text-transform: uppercase;
+	width: auto;
+}
+
+.lead-secondary {
+	color: #fff;
+	display: block;
+	font-family: 'DinotBold';
+	font-size: 14px;
+	letter-spacing: 1px;
+	line-height: 28px;
+	margin: 0 auto 14px;
+	//text-shadow: none;
+	text-transform: uppercase;
+	text-align: center;
+	width: auto;
+	span.number {
+		background: @red;
+		border-radius: 14px;
+		box-shadow: 0 1px 0 rgba(0,0,0,0.3);
+		color: #000;
+		display: inline-block;
+		font-size: 17.5px;
+		height: 28px;
+		line-height: 28px;
+		margin-bottom: -4px;
+		margin-right: 10px;
+		//padding-top: 1px;
+		width: 28px;
+	}
+}
+
+.donate-block {
+	display: block;
+	margin: 0 auto 56px;
+	width: 100%;
+	.donate-banner {
+		display: block;
+		margin: 0 auto 14px;
+		position: relative;
+		text-align: center;
+	}
+	.donate-banner-last {
+		margin-bottom: 0;
+	}
+	#unicef {
+		img {
+		  height: 28px;
 		}
 	}
-	.lead {
-		font-family: 'DinotBold';
-		margin: 0;
-		text-shadow: 0 1px 3px rgba(0,0,0,.5);
-		text-transform: uppercase;
+	#red-cross {
+		img {
+		  height: 70px;
+		}
 	}
 }
 
-#section-donation {
-	color: @red;
-	p {
-		margin: 0;
-	}
-	> div {
-		.donate-banner {
-	  	display: inline-block;
-	  	margin: 0;
-	  	position: relative;
-			top: 0;
-	  }
-	  #unicef {
-	  	img {
-	  	  height: 55px;
-	  	}
-	  }
-	  #red-cross {
-	  	margin-left: 10px;
-	  	img {
-	  	  height: 55px;
-	  	}
-	  }
-	}
-}
-
-#section-donation #help {
-	position: absolute;
-	margin-top: 60px !important;
-}
-
-#section-facebook {
-	color: @red;
-	img {
-		width: 100px;
-		height: auto;
-	}
-	.facebook-wrapper  {
-		display: inline-block;
-		p {
-		  display: block;
-		  span {
-		  	text-transform: uppercase;
-		  }
-	  }
-	}
-	h4 {
-		margin: 0;
-	}
-	div {
-    bottom: 0;
-    padding-left: 110px;
-    position: relative;
-    top: -43px;
-    width: 140%;
-      p,
-	  a {
-	  	color: @red;
-	  	margin: 0;
-	  }
+a.connect {
+	background: none;
+	border: 3px solid @red;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-family: 'DinotBold';
+	font-size: 12px;
+	letter-spacing: 1px;
+	line-height: 42px;
+	margin: 0 auto 56px;
+	outline: none;
+	padding: 14px 10px;
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	text-shadow: none;
+	transition: all 0.3s;
+	img.x {
+		float: right;
+		height: 42px;
+		margin-left: 10px;
+		width: 42px;
 	}
 }
 
-.icon-indent {
-	text-indent: -999em;
+a.connect:hover,
+a.connect:active {
+	background: @red;
+	color: #fff;
+	background: @red;
+	text-decoration: none;
+	text-shadow: none;
 }
 
+#social {
+	display: inline-block;
+	font-family: 'Dinot';
+	font-size: 10px;
+	letter-spacing: 1px;
+	line-height: 14px;
+	margin: 0 auto 56px;
+	text-transform: uppercase;
+	width: 100%;
+	a {
+		border-bottom: 3px solid #fff;
+		color: #fff;
+	display: inline-block;
+		padding: 5px 0;
+		text-decoration: none;
+	}
+	a:hover,
+	a:active {
+		border-color: @red;
+		text-decoration: none;
+	}
+	span.separator {
+		color: #fff;
+		margin: 0 20px;
+	}
+}
 
 
 #notification-overlay {
@@ -168,7 +224,7 @@ body {
 
 #notification-overlay.show {
 	display: block;
-  background: rgba(0,0,0,.6);
+  background: rgba(0,0,0,.8);
   width: 100%;
   height: 100%;
   position: fixed;
@@ -188,7 +244,7 @@ body {
 	> div {
 	  height: 200px;
     margin: 25% auto;
-	  width: 40%;
+	  width: 80%;
 	}
 }
 
@@ -201,15 +257,16 @@ body {
 #popup-box {
 	display: inline-block;
 	background: #000;
-	padding-left: 20px;
-	.border-radius(8px,8px,8px,8px);
+	padding: 24px 20px;
+	.border-radius(none);
 	div {
 		display: inline-block;
-		padding: 10px;
 		p, a {
-			color: @red;
+			color: #000;
+			font-family: 'Dinot';
 		}
 		a {
+			font-family: 'DinotBold';
 			text-decoration: underline;
 		}
 		#close {
@@ -228,105 +285,87 @@ body {
 
 /* */
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 500px) {
 
-  #section-facebook div {
-      top: -62px; 
-  }
-}
+	.container {
+		max-width: 650px;
+	}
 
-
-@media (max-width: 768px) {
-	body {
-		background: url(./images/mobile.png) no-repeat right center;
-	}
-	.jumbotron {
-	 	margin-bottom: 0;
-	}
-	#main-title {
-		margin-top: -10px;
-	}
 	#logo {
-		margin-top: 100px;
-	}
-	.col-sm-5.col-md-6,
-	.col-sm-5.col-sm-offset-2.col-md-6.col-md-offset-0 {
-		text-align: center;
-		p {
-			font-size: 1.5em;
-		}
+		margin: 42px auto 42px;
 	}
 
-	#section-donation {
-		> div {
-		  margin-bottom: 30px !important;
-		}
+	.lead {
+		font-size: 21px;
+		line-height: 31.5px;
+		margin-bottom: 42px;
 	}
-  #section-donation > div p.donate-banner {
-  	display: block;
-  	text-align: center;
-  	margin-bottom: 30px;
-  }
 
-  #section-donation div#help {
-  	text-align: center;
-    padding-left: 0;
-  }
-
-  #section-donation {
-	> div {
+	.donate-block {
 		.donate-banner {
-	  	display: inline-block;
-	  	margin: 0;
-	  	position: relative !important;
-			top: 0;
-	  }
-	  #unicef {
-	  	img {
-	  	  height: 55px;
-	  	}
-	  }
-	  #red-cross {
-	  	margin-left: 10px;
-	  	img {
-	  	  height: 55px;
-	  	}
-	  }
+			display: inline;
+		}
+		.donate-banner-last {
+			margin-left: 20px;
+		}
 	}
 }
-.donate-banner {
-	position: relative !important;
-}
-#section-donation #help {
-	position: relative;
-	margin-top: 60px !important;
-}
-	#section-facebook {
-		margin-top: 100px;
+
+@media (min-width: 650px) {
+
+	.container {
+		max-width: 950px;
 	}
-  #section-facebook h4.facebook-wrapper {
-  	display: block;
-  	text-align: center;
-  }
 
+	.lead {
+		font-size: 28px;
+		line-height: 42px;
+	}
+}
 
-  #section-facebook  div.facebook-wrapper {
-  	display: block;
-  	text-align: center;
-  	position: relative;
-		margin-bottom: 40px;
-		padding-left: 0;
-		width: 100%;
-		top: 43px;
-  }
+@media (min-width: 950px) {
 
-  #section-facebook,
-  #section-donation {
-  	background: rgba(0,0,0,.6);
-		padding: 10px 0;
-  }
+	.container {
+		max-width: 1100px;
+	}
 
-  #section-facebook {
-  	padding: 50px 0;
-  }
+	#notification-window.show {
+		> div {
+		  width: 40%;
+		}
+	}
+
+	#logo {
+		margin: 56px auto 56px;
+	}
+
+	.lead {
+		font-size: 35px;
+		line-height: 49px;
+		margin-bottom: 56px;
+	}
+}
+
+@media (min-width: 1100px) {
+
+	.container {
+		max-width: 1400px;
+	}
+
+	.lead {
+		font-size: 49px;
+		line-height: 63px;
+	}
+}
+
+@media (min-width: 1400px) {
+
+	.container {
+		max-width: 10000px;
+	}
+
+	.lead {
+		font-size: 56px;
+		line-height: 70px;
+	}
 }

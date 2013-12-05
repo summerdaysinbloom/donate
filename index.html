@@ -8,7 +8,7 @@
   <link rel="shortcut icon" href="http://www.nogiftxmas.org/images/favicon.ico">
   <meta property="og:description" content="Dear friends, in light of the recent tragedy in the Philippines, I'm taking a pledge to have a NO GIFT XMAS. Don't buy me gifts this Christmas. Instead, donate to the victims of Typhoon Yolanda at http://www.nogiftxmas.org" />
   <meta property="og:title" content="NO GIFT XMAS" />
-  <meta property="og:type" content="website" />
+  <meta property="og:typhoone" content="website" />
   <meta property="og:url" content="http://www.nogiftxmas.org" />
   <meta property="og:image" content="http://www.nogiftxmas.org/images/nogiftxmas.png" />
   <title>NO GIFT XMAS</title>
@@ -17,7 +17,6 @@
     <link href="less/bootstrap.css" rel="stylesheet">
     <link href="less/jumbotron-narrow.css" rel="stylesheet">
     <link href="assets.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://i.icomoon.io/public/temp/fb761b031c/UntitledProject1/style.css">
     <!-- Custom styles for this template -->
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
@@ -37,20 +36,22 @@
   </head>
 
   <body>
-    <div id='share'>
+    
+    <!--<div id='share'>
 
       <div class="fb-share-button" data-href="http://www.nogiftxmas.org/" data-type="button_count"></div>
       <div id='twitter' style="margin-left: 15px"><a href="https://twitter.com/intent/tweet?hashtags=nogiftxmas&text=Don%E2%80%99t%20buy%20me%20gifts%20this%20Christmas.%20Instead,%20donate%20to%20the%20victims%20of%20Typhoon%20Yolanda%20http://www.nogiftxmas.org" class="twitter-share-button" data-lang="en" target="_blank"><span class="icon-twitter"></span></a></div>
 
-    </div>
+    </div>-->
+
+    <div id="overlay"></div>
     
     <div id='notification-overlay'>
       <div id='notification-window'>
         <div>
           <div id='popup-box'>
-            <img id='popup-btn' src='./images/nogiftxmas.png'/>
             <div>
-	       <p class="status-wait" style="width:300px">Please wait...</p>
+              <p class="status-wait" style="width:300px">Please wait...</p>
               <p class="status-done">You're almost done updating your profile picture. <a id='close'><span class="icon-remove"></span></a></p>
               <p class="status-done"><a href=''  target="_blank" class="photo_link">Click here, expand the image and select 'Done cropping'.</a></p>
             </div>
@@ -58,42 +59,34 @@
         </div>
       </div>
     </div>
+
     <div class="container">
 
-      <div class="jumbotron" id='logo'>
-        <h1>No gift <span>xmas</span></h1>
-      </div>
+      <h1 id="logo">No gift <span>xmas</span></h1>
 
-      <div class="jumbotron" id='main-title'>
-        <p class="lead">This Christmas, Don't shop for gifts.</p>
-        <p class="lead">Donate to the victims of typhoon yolanda.</p>
-      </div>
+      <p class="lead">Don't shop for me this christmas<br/>Donate to the victims of Yolanda</p>
 
-      <div class="row marketing">
-        <div class="col-sm-5 col-md-6"  id='section-donation'>
-          <div id='help'>
-            <p>There's no better gift than the gift of hope.</p>
-            <p>Donate now. Millions need your help.</p>
-          </div>
-          <div>
-            <p class='donate-banner'>
-              <a target="_blank" id='unicef' href='Https://donate.unicef.ph/campaign/24/typhoon-yolanda-emergency-appeal'><img src='./images/unicef.png'/></a>
-            </p>
-            <p class='donate-banner'>
-              <a target="_blank" id='red-cross' href='Http://ushare.redcross.org.ph'><img src='./images/red-cross-logo.png'/></a>
-            </p>
-          </div>
+      <p class="lead-secondary first"><span class="number">1</span>Donate here</p>
+      
+      <div class="donate-block">
+        <p class='donate-banner'>
+          <a target="_blank" id='unicef' href='https://donate.unicef.ph/campaign/24/typhoon-yolanda-emergency-appeal'><img src='./images/unicef-optimized.png'/></a>
+        </p>
+        <p class='donate-banner donate-banner-last'>
+          <a target="_blank" id='red-cross' href='http://ushare.redcross.org.ph'><img src='./images/red-cross-logo-optimized.png'/></a>
+        </p>
+      </div>
           
-        </div>
+      <p class="lead-secondary first"><span class="number">2</span>Spread the word</p>
 
-        <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0" id='section-facebook'>
-          <h4 class='facebook-wrapper'><a onclick="post_to_fb();" id='button-pledge'><img src='./images/nogiftxmas.png'/></a></h4>
-          <div class='facebook-wrapper'>
-            <p><a onclick="post_to_fb();">Pledge to have a <span>no gift xmas</span>.<br>
-            Click and make this your profile picture now.</a></a></p>
-          </div>
-        </div>
+      <a class="connect" onclick="post_to_fb();"><img class="x" src="./images/logo-mobile.png">Change your profile picture</a>
+
+      <div id='social'>
+
+        <a href="https://twitter.com/intent/tweet?hashtags=nogiftxmas&text=Don%E2%80%99t%20buy%20me%20gifts%20this%20Christmas.%20Instead,%20donate%20to%20the%20victims%20of%20Typhoon%20Yolanda%20http://www.nogiftxmas.org" target="_blank">Twitter</a><span class="separator">|</span><a href="javascript:fbshare()" target="">Facebook</a>
+
       </div>
+
     </div> <!-- /container -->
     <div id="fb-root"></div>
     <!-- facebook -->

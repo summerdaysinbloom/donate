@@ -50,6 +50,13 @@ function post_to_fb() {
 }
 
 
+function fbshare() {
+  FB.ui({
+    method: 'feed',
+    link: 'http://www.nogiftxmas.org',
+    caption: "Dear friends, in light of the recent tragedy in the Philippines, I'm taking a pledge to have a NO GIFT XMAS. Don't buy me gifts this Christmas. Instead, donate to the victims of Typhoon Yolanda at http://www.nogiftxmas.org",
+  }, function(response){});
+}
 
 
 function fblogin() {
